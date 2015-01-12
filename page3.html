@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025) -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style="height: 419px;"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Summer Technovation</title>
+        <meta name="description" content="Summer technovation">
+        <link rel="stylesheet" href="assets/main.css">
+       <script src="./assets/modernizr-2.6.2.min.js"></script><style type="text/css"></style>
+         <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+ 		 <meta name="apple-mobile-web-app-capable" content="yes">
+         <link rel="icon" type="image/png" href="http://technovation.stab-iitb.org/assets/favicon.ico">
+         <meta property="og:image" content="http://www.stab-iitb.org/summer_technovation/assets/brain.jpg">
+          <style type="text/css">
+           #cssmenu {
+  position: relative;
+  height: 44px;
+  background: #000000;
+  width: auto;
+  background-attachment: fixed;
+}
+#cssmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+#cssmenu > ul {
+  position: relative;
+  display: block;
+  background: #000000;
+  height: 32px;
+  width: 100%;
+  z-index: 500;
+}
+#cssmenu > ul > li {
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu > ul > #menu-button {
+  display: none;
+}
+#cssmenu ul li a {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+}
+#cssmenu > ul > li > a {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px 20px;
+  color: #7a8189;
+  text-transform: uppercase;
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -ms-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 32px;
+}
+#cssmenu > ul > li:hover > a {
+  color: #ffffff;
+}
+#cssmenu li.has-sub::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+#cssmenu > ul > li.has-sub::after {
+  right: 10px;
+  top: 20px;
+  border: 5px solid transparent;
+  border-top-color: #7a8189;
+}
+#cssmenu > ul > li:hover::after {
+  border-top-color: #ffffff;
+}
+#indicatorContainer {
+  position: absolute;
+  height: 12px;
+  width: 100%;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+#pIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  z-index: -2;
+  -webkit-transition: left .25s ease;
+  -moz-transition: left .25s ease;
+  -ms-transition: left .25s ease;
+  -o-transition: left .25s ease;
+  transition: left .25s ease;
+}
+#cIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  top: -12px;
+  right: 100%;
+  z-index: -2;
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+  top: 70px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease, top .25s ease;
+  -moz-transition: opacity .3s ease, top .25s ease;
+  -ms-transition: opacity .3s ease, top .25s ease;
+  -o-transition: opacity .3s ease, top .25s ease;
+  transition: opacity .3s ease, top .25s ease;
+  z-index: 1000;
+}
+#cssmenu ul ul ul {
+  top: 37px;
+  padding-left: 5px;
+}
+#cssmenu ul ul li {
+  position: relative;
+}
+#cssmenu > ul > li:hover > ul {
+  left: auto;
+  top: 44px;
+  opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+  left: 170px;
+  top: 0;
+  opacity: 1;
+}
+#cssmenu ul ul li a {
+  width: 130px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+  font-size: 12px;
+  color: #9ea2a5;
+  background: #fff;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -ms-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+}
+#cssmenu ul ul li:hover > a {
+  background: #f6f6f6;
+  color: #000203;
+}
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last > a {
+  border-bottom: 0;
+}
+.submenuArrow {
+  border: 6px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: #fff;
+  position: absolute;
+  top: -12px;
+}
+#cssmenu ul ul li.has-sub::after {
+  border: 4px solid transparent;
+  border-left-color: #9ea2a5;
+  right: 10px;
+  top: 12px;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+#cssmenu ul ul li.has-sub:hover::after {
+  border-left-color: #fff;
+  right: -5px;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #cssmenu {
+    width: auto;
+  }
+  #cssmenu ul {
+    width: auto;
+  }
+  #cssmenu .submenuArrow,
+  #cssmenu #indicatorContainer {
+    display: none;
+  }
+  #cssmenu > ul {
+    height: auto;
+    display: block;
+  }
+  #cssmenu > ul > li {
+    float: none;
+  }
+  #cssmenu li,
+  #cssmenu > ul > li {
+    display: none;
+  }
+  #cssmenu ul ul,
+  #cssmenu ul ul ul,
+  #cssmenu ul > li:hover > ul,
+  #cssmenu ul ul > li:hover > ul {
+    position: relative;
+    left: auto;
+    top: auto;
+    opacity: 1;
+    padding-left: 0;
+  }
+  #cssmenu ul .has-sub::after {
+    display: none;
+  }
+  #cssmenu ul li a {
+    padding: 12px 20px;
+  }
+  #cssmenu ul ul li a {
+    border: 0;
+    background: none;
+    width: auto;
+    padding: 8px 35px;
+  }
+  #cssmenu ul ul li:hover > a {
+    background: none;
+    color: #000203;
+  }
+  #cssmenu ul ul ul a {
+    padding: 8px 50px;
+  }
+  #cssmenu ul ul ul ul a {
+    padding: 8px 65px;
+  }
+  #cssmenu ul ul ul ul ul a {
+    padding: 8px 80px;
+  }
+  #cssmenu ul ul ul ul ul ul a {
+    padding: 8px 95px;
+  }
+  #cssmenu > ul > #menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  #cssmenu #menu-button > a {
+    padding: 14px 20px;
+  }
+  #cssmenu ul.open li,
+  #cssmenu > ul.open > li {
+    display: block;
+  }
+  #cssmenu > ul.open > li#menu-button > a {
+    color: #fff;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+  }
+  #cssmenu #menu-button::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #7a8189;
+    border-bottom: 2px solid #7a8189;
+    right: 20px;
+    top: 15px;
+  }
+  #cssmenu #menu-button::before {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #7a8189;
+    right: 20px;
+    top: 25px;
+  }
+  #cssmenu ul.open #menu-button::after,
+  #cssmenu ul.open #menu-button::before {
+    border-color: #fff;
+  }
+}</style>
+<script type="text/javascript">
+        $('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id="cIndicator"></div></div></div>');
+    var activeElement = $('#cssmenu>ul>li:first');
+
+    $('#cssmenu>ul>li').each(function() {
+        if ($(this).hasClass('active')) {
+            activeElement = $(this);
+        }
+    });
+
+
+  var posLeft = activeElement.position().left;
+  var elementWidth = activeElement.width();
+  posLeft = posLeft + elementWidth/2 -6;
+  if (activeElement.hasClass('has-sub')) {
+    posLeft -= 6;
+  }
+
+  $('#cssmenu #pIndicator').css('left', posLeft);
+  var element, leftPos, indicator = $('#cssmenu pIndicator');
+  
+  $("#cssmenu>ul>li").hover(function() {
+        element = $(this);
+        var w = element.width();
+        if ($(this).hasClass('has-sub'))
+        {
+          leftPos = element.position().left + w/2 - 12;
+        }
+        else {
+          leftPos = element.position().left + w/2 - 6;
+        }
+
+        $('#cssmenu #pIndicator').css('left', leftPos);
+    }
+    , function() {
+      $('#cssmenu #pIndicator').css('left', posLeft);
+    });
+
+
+  $('#cssmenu>ul>.has-sub>ul').append('<div class="submenuArrow"></div>');
+  $('#cssmenu>ul').children('.has-sub').each(function() {
+    var posLeftArrow = $(this).width();
+    posLeftArrow /= 2;
+    posLeftArrow -= 12;
+    $(this).find('.submenuArrow').css('left', posLeftArrow);
+
+  });
+
+  $('#cssmenu>ul').prepend('<li id="menu-button"><a>Menu</a></li>');
+  $( "#menu-button" ).click(function(){
+        if ($(this).parent().hasClass('open')) {
+          $(this).parent().removeClass('open');
+        }
+        else {
+          $(this).parent().addClass('open');
+        }
+      });
+        </script>
+
+    </head>
+    <body cz-shortcut-listen="true">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+       <div class="logo"></div>
+                  <div id='cssmenu'>
+                  <ul>
+                     <li class='active'><a href='index.html'><span>Home</span></a></li>
+                     <li><a href='#'><span>About</span></a></li>
+                     <li class='has-sub'><a href='#'><span>Ongoing Projects</span></a>
+                        <ul>
+                           <li><a href='#'><span>Product 1</span></a></li>
+                           <li><a href='#'><span>Product 2</span></a></li>
+                           <li><a href='#'><span>Product 3</span></a></li>
+                           <li><a href='#'><span>Product 4</span></a></li>
+                           <li><a href='#'><span>Product 5</span></a></li>
+                           <li><a href='#'><span>Product 6</span></a></li>
+                           <li><a href='#'><span>Product 7</span></a></li>
+                           <li class='last'><a href='#'><span>Product 8</span></a></li>
+                        </ul>
+                     </li>
+                     
+                     <li class='has-sub last'><a href='#'><span>What You can Do...</span></a>
+                        <ul>
+                           <li><a href='#'><span>Product 1</span></a></li>
+                           <li><a href='#'><span>Product 2</span></a></li>
+                           <li class='last'><a href='#'><span>Product 3</span></a></li>
+                        </ul>
+                     </li>
+                     <li><a href='#'><span>Contact</span></a></li>
+                  </ul>
+                  </div>
+
+       <div id="main" class="collapsfix relative" style="opacity: 1;">
+       <nav class="pagination">
+           <ul class="ul-nostyle">
+           <li><a href="#whatisbigdata" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><span class=""></span></a></li>
+           <li><a href="#whynow" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><span class=""></span></a></li>
+           <li><a href="#howbig" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><span class=""></span></a></li>
+           <li><a href="#howpeople" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><span class=""></span></a></li>
+           <li><a href="#ourambition" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><span class="navSelect"></span></a></li>
+           </ul>
+       </nav>
+
+       
+           <header id="video" class="scrolling">
+              
+               
+              
+           </header>
+           
+          
+           
+           <div id="01" class="number proximaBold"></div>
+           
+           <section id="whatisbigdata" class="collapsfix scrolling mainWidth sectionPadding" style="padding-top:10px">
+               <h1 class="proximaLite apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">What is <strong class="keyword">Summer Technovation</strong>?</h1>
+               <figure class="apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);"></figure>
+               <p class="apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">Technovation is an expressway to innovation, a platform for students to float innovative projects, recruit teams, get funded, find mentors and realize their dream projects..</p>
+               <br>
+               <p>Team Technovation introduces to you <strong>'Summer Technovation'</strong>, where you can come up with your own ideas and turn them into reality during the summer with full support in terms of <strong>funding</strong>, infrastructure, mentoring and lot more. The project can be inspired from real-life problems around us or can be driven by your whims and fancies. It is expected that the teams complete their projects and come up with working prototype of the product that they propose to make</p>
+           </section>
+            <div class="scroll proximaBold collapsfix">
+               <div class="next"><a href="#whynow"></a></div>
+           </div>
+           <div class="number proximaBold"><div>2</div></div>
+           
+           <section id="whynow" class="collapsfix scrolling mainWidth sectionPadding">
+               <h1 class="proximaLite apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);"><strong>Why</strong> to pursue <br><strong>Summer Technovation</strong>?</h1>
+               <div class="clearfix">
+                   <div class="cul apear floatL" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                       <figure class="img01"></figure>
+                       <h2 class="proximaBold">Fulfilment of <br>tech at heart</h2>
+                       <div class="line"></div>
+                       <p>You spend your summer doing something close to your heart with full funding and at an excellent workplace- Tinkerers' Lab.</p>
+                   </div>
+                   <div class="cul apear floatL" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                       <figure class="img02"></figure>
+                       <h2 class="proximaBold">Get known and valued in the world</h2>
+                       <div class="line"></div>
+                       <p>You may end up turning your product into market reality with the support of SINE, E-Cell etc.</p>
+                       <p>You will get full support to get your innovative projects patented.</p>
+                   </div>
+                   <div class="cul apear floatL" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                       <figure class="img03"></figure>
+                       <h2 class="proximaBold">Achieve glory</h2>
+                       <div class="line"></div>
+                       <p>You will be provided opportunity to showcase your project in exhibitions and  symposiums at national level.<br><br>You can take up your idea to a next level in Technovation in the upcoming year.</p>
+                   </div>
+               </div>
+           </section>
+           <div class="scroll proximaBold collapsfix">
+               <div class="next"><a href="#howbig"></a></div>
+           </div>
+           <div class="number proximaBold"><div>3</div></div>
+           
+           
+           <section id="howbig" class="collapsfix scrolling mainWidth sectionPadding">
+           <h1 class="proximaLite apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">Am I <strong>Eligible</strong>?</h1>
+           <div class="clearfix">
+                   <div class="cul floatL apear" style="opacity: 0; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                      
+                   </div>
+                   <div class="cul floatL apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                   		
+                       <figure class="img02"></figure>
+                       <h2 class="proximaBold">Post Graduate</h2>
+                       <p>All <strong>PG students</strong> (completed at least one semester in the Institute) and  </p>
+                   </div>
+                   <div class="cul floatL apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                       <figure class="img03"></figure>
+                       <h2 class="proximaBold">Under Graduate</h2>
+                       <p>All <strong>UG students</strong> (completed at least 3 semesters in the Institute) are eligible for Summer Technovation. </p>
+                   </div>
+                  
+               </div>
+           <h2>Selection Procedure:</h2>
+<p>We believe passion, desire and willpower are the most important qualities to be successful and hence instead of floating projects, we are inviting students to pitch in their ideas and be team leaders. These ideas need to be submitted in the form of an abstract detailing the technical aspects. Best innovative ideas with technologically sound solutions would be selected on by the review committee.</p>
+<h2>Team Structure</h2><p> The project can be done individually or in a team with maximum four members. People from any domain can work together.</p>
+<h2>Project Duration</h2><p> The project must be minimum one month long and can extend up to full summer. After a month of the start of project, it is expected that a demonstrable prototype should be ready.</p>
+           </section>
+           <div class="scroll proximaBold collapsfix">
+               <div class="next"><a href="#howpeople"></a></div>
+           </div>
+           <div class="number center proximaBold"><div>4</div></div>
+           
+           <section id="howpeople" class="collapsfix scrolling mainWidth sectionPadding">
+           <h1 class="proximaLite apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">What should be in <strong>Abstract</strong>?</h1>
+           		<div class="clearfix">
+                   <div class="cul floatL apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                   		<figure class="img01"></figure>
+                       <h2 class="proximaBold">Problem Statement</h2>
+                       <div class="line"></div>
+                       <p>This section describes what exactly is the problem solved by the project. It should also include the expected outcome after successful completion of the project.</p>
+                   </div>
+                   <div class="cul floatL apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                   		<figure class="img02"></figure>
+                       <h2 class="proximaBold">Solution</h2>
+                       <div class="line"></div>
+                       <p>This would describe how the team  wishes to tackle the problem. It should be detailed and technically sound. It should also highlight the possible challenges and how they would be overcome.</p>
+                   </div>
+                   <div class="cul floatL apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                   		<figure class="img03"></figure>
+                       <h2 class="proximaBold">Costs</h2>
+                       <div class="line"></div>
+                       <p>Expected costs to be incurred.<br>It should reflect the seriousness with which you have done your groundwork.</p>
+                   </div>
+                   <div class="cul floatL apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                   		<figure class="img04"></figure>
+                       <h2 class="proximaBold">Timeline</h2>
+                       <div class="line"></div>
+                       <p>Rough timeline which breaks down project into verifiable targets.</p>
+                   </div>
+               </div>
+           
+           </section>
+           <div class="scroll proximaBold collapsfix">
+               <div class="next"><a href="#ourambition"></a></div>
+           </div>
+            <div class="number center proximaBold"><div>5</div></div>
+           
+           <section id="ourambition" class="scrolling clearfix mainWidth">
+               <h1 class="proximaLite apear" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">How to <strong>Apply</strong> ?</h1>
+               <div class="clearfix">
+                   <div class="cul apear floatL" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                   		<div class="verticalLine"></div>
+                   		<figure class="diamond relative"><img class="centerAbsolute" src="./assets/diamond01.jpg" alt="Experiences"></figure>
+                        <h2 class="proximaBold">Register yourself</h2>
+                       	<div class="line"></div>
+                        <p>For registering your team fill the form at <a target=_blank href="https://stab.typeform.com/to/ZjkE8g">Registration form</a></p>
+                        <div class="space"></div>
+                        <div class="verticalLine"></div>
+                   		<figure class="diamond relative"><img class="centerAbsolute" src="./assets/diamond04.jpg" alt="Reward Influence"></figure>
+                        <h2 class="proximaBold">Submit Abstracts</h2>
+                       	<div class="line"></div>
+                        <p>You can mail your abstracts along with the rough timeline later at <strong>sumtech2k14@gmail.com</strong></p>
+                   </div>
+                   <div class="cul center apear floatL" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                   		<div class="verticalLine"></div>
+                   		<figure class="diamond relative"><img class="centerAbsolute" src="./assets/diamond02.jpg" alt="Barclays Kiosk"></figure>
+                        <h2 class="proximaBold">Deadline</h2>
+                       	<div class="line"></div>
+                        <p>Deadline for registration is <br><strong>15th April, 11:59 pm.</strong>
+
+</p>
+                   </div>
+                   
+                   <div class="cul apear floatL" style="opacity: 1; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);">
+                   		<div class="verticalLine"></div>
+                   		<figure class="diamond relative"><img class="centerAbsolute" src="./assets/diamond03.jpg" alt="Retail"></figure>
+                        
+                   </div>
+               </div>
+           
+           </section>
+           
+           <footer class="relative" style="top: 0px; opacity: 1;">
+       <div class="cont">
+       	
+            <div class="line" style="margin-bottom:10px;margin-top:10px"></div>
+            	Presented by <strong>STAB</strong>
+            <div class="line" style="margin-bottom:10px;margin-top:10px"></div>
+            <p>Send your queries to:
+            <div>Apurv Mittal (9167768604 | darenot.apurv@gmail.com)</div>
+<div>Shyam Sunder Prasad ( 7738450101 | ssprasad49@gmail.com )</div>	
+<div>Dewashish Dey (7738258332 | dewashish.dey05@gmail.com )</div>
+<div>Manmohan (9769486341 | manmohanmandhana000@gmail.com )</div>
+            </p>
+        <br>
+        <p>Site built by <strong><a href="#">Prateek chandan</a></strong></p>      
+</div>
+
+       <div class="trinagle"></div>
+       </footer>
+       
+       </div>
+<div id="fb-root"></div>
+        <script src="./assets/jquery.min.js"></script>
+        <script src="./assets/plugins.js"></script>
+        <script src="./assets/main.js"></script>
+
+ 
+    
+
+</body></html>
